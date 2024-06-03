@@ -14,10 +14,12 @@ export class AppComponent {
   title = 'matter-ng'
 
   constructor(private themeService: ThemeService) {
-    const localDarkMode = localStorage.getItem('dark-mode')
-    if (localDarkMode) {
-      const theMode = JSON.parse(localDarkMode)
-      this.themeService.setDarkMode(theMode)
+    if(typeof window !== 'undefined') {
+      const localDarkMode = localStorage.getItem('dark-mode')
+      if (localDarkMode) {
+        const theMode = JSON.parse(localDarkMode)
+        this.themeService.setDarkMode(theMode)
+      }
     }
   }
 }
