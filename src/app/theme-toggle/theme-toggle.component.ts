@@ -1,12 +1,14 @@
 import { Component } from '@angular/core'
 import { ThemeService } from '../theme.service'
 import { MatIcon } from '@angular/material/icon'
+import { MatIconButton } from '@angular/material/button'
 
 @Component({
   selector: 'app-theme-toggle',
   standalone: true,
   imports: [
-    MatIcon
+    MatIcon,
+    MatIconButton
   ],
   templateUrl: './theme-toggle.component.html',
   styleUrl: './theme-toggle.component.css'
